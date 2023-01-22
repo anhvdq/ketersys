@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" class="h-100">
+<head th:replace="layout :: head(title=~{::title},links=~{::link})">
+</head>
+<body class="w-100 h-100 text-center text-white bg-dark p-2 mx-auto d-flex flex-column">
+
+<div th:replace="layout :: header('home')"/>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <img src="/img/crown.png" class="filter-white"/>
+        </div>
+        <div class="col-12">
+            <p>Some sentences here....</p>
+        </div>
+    </div>
+</div>
+
+<div th:replace="layout :: footer"/>
+<script th:replace="layout :: script"/>
+</body>
+</html>

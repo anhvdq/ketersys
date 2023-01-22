@@ -1,0 +1,24 @@
+.navbar .container {
+    max-width: 42em;
+}
+
+.filter-white {
+    filter: invert(90%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(105%) contrast(106%);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #ffffff;
+    color: #000;
+    padding: 0 4px;
+    vertical-align: top;
+    margin-left: -10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}

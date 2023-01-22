@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title, links)">
+
+    <!--
+        ██╗░░██╗███████╗████████╗███████╗██████╗░
+        ██║░██╔╝██╔════╝╚══██╔══╝██╔════╝██╔══██╗
+        █████═╝░█████╗░░░░░██║░░░█████╗░░██████╔╝
+        ██╔═██╗░██╔══╝░░░░░██║░░░██╔══╝░░██╔══██╗
+        ██║░╚██╗███████╗░░░██║░░░███████╗██║░░██║
+        ╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <th:block th:if="${title}">
+        <th:block th:replace="${title}"/>
+    </th:block>
+    <title th:unless="${title}">Keter</title>
+
+    <link href="/css/general.css" rel="stylesheet">
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="/img/crown.png"/>
+    <!-- Bootstrap 5.0.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Other -->
+    <th:block th:if="${links}">
+        <th:block th:replace="${links}"/>
+    </th:block>
+</head>
+<body>
+<header th:fragment="header(page)" class="mb-auto">
+    <nav class="navbar navbar-expand navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <img width="20" height="20" src="/img/crown.png" class="filter-white me-2"/>
+                <strong>Keter</strong>
+            </a>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:classappend="${page == 'home' ? 'active':''}" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:classappend="${page == 'projects' ? 'active':''}" href="/projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<footer th:fragment="footer" class="footer mt-auto text-white-50 py-5">
+    <div class="container">
+        <p><em>A website by <a href="#" class="text-white">@me</a>.</em></p>
+    </div>
+</footer>
+
+<th:block th:fragment="script">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</th:block>
+
+</body>
+</html>
