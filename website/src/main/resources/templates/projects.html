@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" class="h-100">
-<head th:replace="layout :: head(title=~{::head/title},links=~{::head/link})">
+<head th:replace="~{layout :: head(title=~{::head/title},links=~{::head/link})}">
   <title>Projects</title>
 </head>
 <body class="w-100 h-100 text-center text-white bg-dark p-2 mx-auto d-flex flex-column">
 
-<div th:replace="layout :: header('projects')"/>
+<div th:replace="~{layout :: header('projects')}"/>
 
 <div class="container-fluid">
   <div class="row">
@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<div th:replace="layout :: footer"/>
-<script th:replace="layout :: script"/>
+<div th:replace="~{layout :: footer}"/>
+<script th:replace="~{layout :: script}"/>
 </body>
 </html>
