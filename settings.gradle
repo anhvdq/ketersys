@@ -1,2 +1,3 @@
 rootProject.name = 'ketersys'
 include 'website'
+include 'scraper-service'
